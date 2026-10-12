@@ -1,0 +1,333 @@
+.cache {
+    display: none !important;
+}
+ 
+
+.bouton-panier:focus-visible,
+.corps-home :focus-visible,
+.fond :focus-visible {
+    outline: 3px solid var(--vert);
+    outline-offset: 2px;
+}
+ 
+/*bouton panier fixer en haut a droite*/
+   
+.bouton-panier {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 15;
+ 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ 
+    padding: 10px 18px;
+ 
+    background-color: var(--fond-carte);
+    color: var(--blanc);
+ 
+    border: 2px solid var(--violet-clair);
+    border-radius: 999px;
+ 
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+ 
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+ 
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+ 
+.bouton-panier:hover {
+    border-color: var(--vert);
+    box-shadow: 0 0 12px rgba(57, 255, 20, 0.6);
+}
+ 
+.compteur {
+    min-width: 26px;
+    padding: 0 8px;
+ 
+    background-color: var(--vert);
+    color: var(--fond);
+ 
+    border-radius: 999px;
+ 
+    text-align: center;
+    font-weight: bold;
+}
+ 
+/*  bouton ajouter + prix  */
+ 
+.jeu-achat {
+    padding: 0 25px 25px;
+}
+ 
+.prix-jeu {
+    margin-bottom: 15px;
+ 
+    color: var(--vert);
+ 
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+ 
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
+}
+ 
+.ajouter-panier,
+.bouton-large {
+    width: 100%;
+ 
+    font: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+ 
+    cursor: pointer;
+}
+ 
+/* fenetre panier et paiement*/
+ 
+.fond {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+ 
+    display: flex;
+ 
+    background-color: rgba(8, 8, 16, 0.85);
+}
+ 
+.fond-panier {
+    justify-content: flex-end;
+}
+ 
+.fond-paiement {
+    align-items: center;
+    justify-content: center;
+ 
+    padding: 15px;
+}
+ 
+.fenetre {
+    display: flex;
+    flex-direction: column;
+ 
+    background-color: var(--fond-carte);
+    color: var(--blanc);
+ 
+    animation: apparition 0.25s ease-out;
+}
+ 
+
+.fenetre-panier {
+    width: min(420px, 100%);
+    height: 100%;
+ 
+    padding: 25px;
+ 
+    border-left: 2px solid var(--violet);
+ 
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+}
+ 
+
+.fenetre-paiement {
+    width: min(460px, 100%);
+    max-height: 100%;
+    overflow-y: auto;
+ 
+    padding: 25px;
+ 
+    border: 1px solid var(--violet-clair);
+    border-radius: 10px;
+ 
+    box-shadow:
+        0 0 10px rgba(138, 43, 226, 0.5),
+        0 0 30px rgba(138, 43, 226, 0.25);
+}
+ 
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+ 
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+ 
+.fenetre-entete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+    margin-bottom: 20px;
+}
+ 
+.fenetre-titre {
+    color: var(--violet-clair);
+ 
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+ 
+    text-shadow: 0 0 8px var(--violet);
+}
+ 
+.bouton-fermer {
+    padding: 6px 14px;
+ 
+    background-color: transparent;
+    color: var(--blanc);
+ 
+    border: 1px solid var(--violet-clair);
+    border-radius: 6px;
+ 
+    font: inherit;
+    cursor: pointer;
+ 
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+ 
+.bouton-fermer:hover {
+    background-color: var(--violet-fonce);
+    border-color: var(--vert);
+}
+
+ /*contenu panier*/
+ 
+.contenu-panier {
+    flex: 1;
+    overflow-y: auto;
+}
+ 
+.contenu-panier:empty::before {
+    content: "Votre panier est vide.";
+    color: var(--gris);
+}
+ 
+.produit-panier {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+ 
+    padding: 12px 0;
+ 
+    border-bottom: 1px solid rgba(138, 43, 226, 0.35);
+}
+ 
+.produit-panier button {
+    padding: 5px 12px;
+ 
+    background-color: transparent;
+    color: var(--gris);
+ 
+    border: 1px solid var(--gris);
+    border-radius: 6px;
+ 
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+ 
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+ 
+.produit-panier button:hover {
+    color: var(--vert);
+    border-color: var(--vert);
+}
+ 
+.panier-bas {
+    padding-top: 20px;
+ 
+    border-top: 2px solid var(--violet);
+}
+ 
+.ligne-total {
+    display: flex;
+    justify-content: space-between;
+ 
+    margin-bottom: 15px;
+ 
+    font-size: 1.2rem;
+}
+ 
+.ligne-total strong {
+    color: var(--vert);
+}
+
+/* paiement */
+ 
+.avertissement {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+ 
+    color: var(--gris);
+ 
+    border: 1px dashed var(--vert);
+    border-radius: 6px;
+ 
+    font-size: 0.95rem;
+}
+ 
+.champs {
+    margin-bottom: 25px;
+}
+ 
+.champs label {
+    display: block;
+ 
+    margin: 16px 0 6px;
+ 
+    font-weight: bold;
+}
+ 
+.champs input {
+    width: 100%;
+    padding: 11px 14px;
+ 
+    background-color: var(--fond);
+    color: var(--blanc);
+ 
+    border: 2px solid var(--violet);
+    border-radius: 6px;
+ 
+    font: inherit;
+}
+ 
+.champs input:focus {
+    border-color: var(--vert);
+    outline: none;
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
+}
+ 
+.champs input::placeholder {
+    color: var(--gris);
+    opacity: 0.6;
+}
+ 
+.deux-colonnes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.corps-home-item-image {
+      object-fit: contain;
+      background-color: var(--fond);
+  }
+
+  .corps-home-item-image {
+      object-position: top;
+  }

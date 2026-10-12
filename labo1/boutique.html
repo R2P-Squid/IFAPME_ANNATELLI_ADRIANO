@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arcade - Boutique</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="panier.css">
+</head>
+
+<body class="home-background">
+
+    <!-- bouton panier -->
+    <button id="ouvrir-panier" class="bouton-panier" type="button">Panier<span id="nombre-panier" class="compteur">0</span></button>
+
+    <main class="home-header">
+        <div class="home-content">
+            <h1 class="home-title">Bienvenue sur <strong>la boutique</strong></h1>
+            <p class="home-description">Vous pouvez retirer vos commandes au magasin ou vous faire livrer à domicile
+                dans
+                la province de Liège.
+            </p>
+            <a href="index.html" class="home-button">Retour à l'accueil</a>
+            <a href="contact.html" class="home-button">Nous contacter</a>
+        </div>
+    </main>
+
+    <!-- Liste des jeux -->
+
+    <section class="corps-home">
+        <h2 class="corps-home-title">Nos jeux</h2>
+ 
+        <div class="corps-home-content">
+ 
+            <article class="corps-home-item">
+                
+                <div class="corps-home-item-text">
+                    <img src="https://i.imgur.com/QJhNuUc.jpeg" alt="Jeu 1" class="corps-home-item-image">
+                    <h3 class="corps-home-item-title">The Blood of Dawnwalker</h3>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <p class="corps-home-item-description" style="text-align: center;">Action-RPG</p>
+                    <p class="corps-home-item-description" style="text-align: center;">64.99 €</p>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <button class="ajouter-panier" type="button" data-nom="The Blood of Dawnwalker" data-prix="64.99">Ajouter au panier</button>
+                </div>
+            </article>
+ 
+            <article class="corps-home-item">
+                
+                <div class="corps-home-item-text">
+                    <img src="https://i.imgur.com/tnjXqoN.jpeg" alt="Jeu 2" class="corps-home-item-image">
+                    <h3 class="corps-home-item-title">Echoes of Aincrad</h3>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <p class="corps-home-item-description" style="text-align: center;">Action-RPG</p>
+                    <p class="corps-home-item-description" style="text-align: center;">69.99 €</p>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <button class="ajouter-panier" type="button" data-nom="Echoes of Aincrad" data-prix="69.99">Ajouter au panier</button>
+                </div>
+            </article>
+ 
+            <article class="corps-home-item">
+                
+                <div class="corps-home-item-text">
+                    <img src="https://i.imgur.com/Gf7JiGh.png" alt="Jeu 4" class="corps-home-item-image">
+                    <h3 class="corps-home-item-title">007 First Light</h3>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <p class="corps-home-item-description" style="text-align: center;">Action-aventure</p>
+                    <p class="corps-home-item-description" style="text-align: center;">69.99 €</p>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <button class="ajouter-panier" type="button" data-nom="007 First Light" data-prix="69.99">Ajouter au panier</button>
+                </div>
+            </article>
+ 
+            <article class="corps-home-item">
+               
+                <div class="corps-home-item-text">
+                    <img src="https://i.imgur.com/rWVDgnJ.jpeg" alt="Jeu 5" class="corps-home-item-image">
+                    <h3 class="corps-home-item-title">FC 27</h3>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <p class="corps-home-item-description" style="text-align: center;">Sport</p>
+                    <p class="corps-home-item-description" style="text-align: center;">79.99 €</p>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <button class="ajouter-panier" type="button" data-nom="FC 27" data-prix="79.99">Ajouter au panier</button>
+                </div>
+            </article>
+ 
+            <article class="corps-home-item">
+                
+                <div class="corps-home-item-text">
+                    <img src="https://i.imgur.com/XAk2IBb.jpeg" alt="Jeu 6" class="corps-home-item-image">
+                    <h3 class="corps-home-item-title">Call of Duty <br> Black Ops 7 </br> </h3>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <p class="corps-home-item-description" style="text-align: center;">Jeu de tir à la première personne</p>
+                    <p class="corps-home-item-description" style="text-align: center;">79.99 €</p>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <button class="ajouter-panier" type="button" data-nom="Call of Duty <br> Black Ops 7 </br> " data-prix="79.99">Ajouter au panier</button>
+                </div>
+            </article>
+ 
+            <article class="corps-home-item">
+                
+                <div class="corps-home-item-text">
+                    <img src="https://i.imgur.com/6HfsC3t.jpeg" alt="Jeu 7" class="corps-home-item-image">
+                    <h3 class="corps-home-item-title">Hollow Knight</h3>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <p class="corps-home-item-description" style="text-align: center;">Metroidvania</p>
+                    <p class="corps-home-item-description" style="text-align: center;">14.99 €</p>
+                    <p class="corps-home-item-description" style="text-align: center;">------------------------</p>
+                    <button class="ajouter-panier" type="button" data-nom="Hollow Knight" data-prix="14.99">Ajouter au panier</button>
+                </div>
+            </article>
+ 
+        </div>
+ 
+        <p><i>*Boutique fictive créée pour un projet. Aucun paiement réel n'est effectué.<i></p>
+    </section>
+ 
+ 
+    <!-- Fenêtre du panier -->
+    <div id="fond-panier" class="fond fond-panier cache">
+        <aside class="fenetre fenetre-panier" role="dialog" aria-modal="true" aria-labelledby="titre-panier">
+            <div class="fenetre-entete">
+                <h2 id="titre-panier" class="fenetre-titre">Votre panier</h2>
+                <button id="fermer-panier" class="bouton-fermer" type="button" aria-label="Fermer le panier">Fermer</button>
+            </div>
+ 
+           
+            <div id="contenu-panier" class="contenu-panier"></div>
+ 
+            <div class="panier-bas">
+                <p class="ligne-total">Total : <strong><span id="total">0.00</span> €</strong></p>
+                <button id="paiement" class="home-button bouton-large" type="button">Passer au paiement</button>
+            </div>
+        </aside>
+    </div>
+ 
+ 
+    <!-- Fenêtre de paiement -->
+    <div id="fond-paiement" class="fond fond-paiement cache">
+        <section class="fenetre fenetre-paiement" role="dialog" aria-modal="true" aria-labelledby="titre-paiement">
+            <div class="fenetre-entete">
+                <h2 id="titre-paiement" class="fenetre-titre">Paiement</h2>
+                <button id="fermer-paiement" class="home-button" type="button" aria-label="Fermer le paiement">Fermer</button>
+            </div>
+ 
+            <p class="avertissement">Paiement de démonstration : n'entrez pas de vraies coordonnées bancaires.</p>
+ 
+            <div class="champs">
+                <label for="nom-carte">Nom sur la carte</label>
+                <input id="nom-carte" type="text" placeholder="Prénom Nom" autocomplete="off">
+ 
+                <label for="numero-carte">Numéro de carte</label>
+                <input id="numero-carte" type="text" inputmode="numeric" placeholder="0000 0000 0000 0000" autocomplete="off">
+ 
+                <div class="deux-colonnes">
+                    <div>
+                        <label for="expiration">Date d'expiration</label>
+                        <input id="expiration" type="text" placeholder="MM/AA" autocomplete="off">
+                    </div>
+                    <div>
+                        <label for="cvc">Code de sécurité</label>
+                        <input id="cvc" type="text" inputmode="numeric" placeholder="123" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+ 
+            
+            <button id="payer" class="home-button bouton-large" type="button">Payer</button>
+        </section>
+    </div>
+ 
+    
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,453 @@
+/* Thème général de la page d'accueil
+Code CSS généré par IA - selon mon code HTML fait sans IA - et avec mes indications. Modifé par moi. */
+
+:root {
+    /* La balise root correspond à l'élément HTML.
+    Les couleurs ont étés générées par IA pour un meilleur rendu, mais définies et choisies par moi dans l'ensemble.
+    Les couleurs thématiques peuvent être réutilisées dans tout le site avec la variable var() */
+    --violet: #8a2be2;
+    --violet-clair: #b45cff;
+    --violet-fonce: #4b0082;
+
+    --vert: #39ff14;
+    /* Vert néon pour les boutons et effets au survol */
+    --vert-fonce: #20c900;
+
+    --fond: #080810;
+    /* Fond très sombre pour un effet néon */
+    --fond-carte: #12121c;
+
+    --blanc: #ffffff;
+    /* Blanc pur pour le texte principal */
+    --gris: #c7c7d1;
+}
+
+/* Paramètres généraux de la page d'accueil */
+
+* {
+    /* Ce * est un sélecteur universel qui va appliquer les modifications css à la page html. 
+    Tout est réglé à 0 par défaut pour ensuite appliquer une modification au cas par cas. */
+    margin: 0;
+    /* Supprime les marges par défaut */
+    padding: 0;
+    /* Supprime les espaces intérieurs par défaut */
+    box-sizing: border-box;
+    /* Permet de calculer la largeur et la hauteur des éléments en incluant les bordures et le padding */
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Permet un défilement fluide lors de l'utilisation des ancres */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fond);
+    color: var(--blanc);
+    line-height: 1.6;
+    /* Applique les paramètres suivant à la partie body de la page html. Changer les variables roots
+    permet de changer les paramètres de body sans toucher à cette partie là - gain de temps et d'efficacité */
+}
+
+/* Mise en page du HEADER de la boutique */
+/* Pour le HEADER, j'ai procédé étape par étape, chaque classe a une utilité très précise et spécifique. */
+
+.home-background {
+    background:
+        radial-gradient(circle at top,
+            rgba(138, 43, 226, 0.22),
+            /* Rajoute une lumière violette et claire en haut de la page pour un effet néon
+            opacité à 0.22 et disparition progressive de la lumière à 40%. */
+            transparent 40%),
+        var(--fond);
+}
+
+.home-header {
+    /* Personnalisation du HEADER */
+    min-height: 100vh;
+    /* La hauteur minimale est de 100% de la hauteur de la fenêtre, viewport. */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    /* Combinaison de flexbox et text-align pour centrer le contenu du header */
+
+    padding: 40px 20px;
+
+    border-bottom: 2px solid var(--violet);
+    /* Ligne violette décorative sous le header */
+}
+
+.home-content {
+    width: 100%;
+    max-width: 1000px;
+    /* Le contenu du header ne dépassera pas 1000px de largeur, même sur grand écran. */
+}
+
+.home-logo {
+    width: 400px;
+    height: auto;
+
+    margin-bottom: 20px;
+    /* Marge en dessous du logo pour séparer celui-ci du titre */
+}
+
+/* Titre et description du HEADER */
+
+.home-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    /* Le titre s'adapte à la taille de l'écran, minimum 3rem (16px:1rem), maximum 6rem. 8VW = 8% de la largeur de la fenêtre */
+    text-transform: uppercase;
+    /* Peut s'utiliser soit avec lowercase, soit avec capitalize. Ici, le titre est en majuscules. */
+
+    letter-spacing: 8px;
+
+    color: var(--violet-clair);
+
+    margin-bottom: 15px;
+    /* Marge en dessous du titre pour séparer le titre de la description */
+
+    text-shadow:
+        0 0 5px var(--violet),
+        /* Aucun déplacement horizontal ou vertical, mais une lumière violette de 5px derrière le titre */
+        0 0 15px var(--violet),
+        0 0 30px var(--violet);
+}
+
+.home-description {
+    font-size: 1.4rem;
+    color: var(--gris);
+
+    margin-bottom: 35px;
+    /* Marge en dessous de la description pour séparer celle-ci du bouton */
+}
+
+/* =========================================================
+   BOUTON PRINCIPAL
+   ========================================================= */
+
+.home-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    color: var(--fond);
+    background-color: var(--vert);
+
+    border: 2px solid var(--vert);
+    border-radius: 6px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 0 8px rgba(57, 255, 20, 0.7),
+        0 0 20px rgba(57, 255, 20, 0.4);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Animation du bouton */
+
+.home-button:hover {
+    transform: translateY(-4px);
+
+    background-color: transparent;
+    color: var(--vert);
+
+    box-shadow:
+        0 0 10px var(--vert),
+        0 0 30px rgba(57, 255, 20, 0.6);
+}
+
+
+/* =========================================================
+   SECTIONS DE LA PAGE
+   ========================================================= */
+
+.corps-home {
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 80px 30px;
+}
+
+
+/* ---------- TITRES DES SECTIONS ---------- */
+
+.corps-home-title {
+    text-align: center;
+
+    font-size: 2rem;
+
+    color: var(--vert);
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    margin-bottom: 50px;
+
+    text-shadow:
+        0 0 5px rgba(57, 255, 20, 0.8),
+        0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+
+/*
+   Petite ligne violette décorative sous chaque titre.
+*/
+
+.corps-home-title::after {
+    content: "";
+
+    display: block;
+
+    width: 100px;
+    height: 3px;
+
+    background-color: var(--violet);
+
+    margin: 15px auto 0;
+
+    box-shadow: 0 0 10px var(--violet);
+}
+
+
+/* =========================================================
+   GRILLE DES JEUX
+   ========================================================= */
+
+.corps-home-content {
+    display: grid;
+
+    /*
+       Trois colonnes de même largeur sur ordinateur.
+    */
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CARTES DES JEUX
+   ========================================================= */
+
+.corps-home-item {
+    background-color: var(--fond-carte);
+
+    border: 1px solid rgba(180, 92, 255, 0.4);
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    /*
+       Toutes les cartes auront une apparence similaire
+       même si leur texte n'a pas exactement la même longueur.
+    */
+
+    height: 100%;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.4);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/*
+   Au survol, la carte remonte légèrement
+   avec une lumière violette.
+*/
+
+.corps-home-item:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--violet-clair);
+
+    box-shadow:
+        0 0 10px rgba(138, 43, 226, 0.5),
+        0 0 30px rgba(138, 43, 226, 0.25);
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+.corps-home-item-image {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-bottom: 2px solid var(--violet);
+}
+
+
+/* =========================================================
+   TEXTES DES CARTES
+   ========================================================= */
+
+.corps-home-item-text {
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+
+/* Titre du jeu */
+
+.corps-home-item-title {
+    color: var(--violet-clair);
+
+    font-size: 1.35rem;
+
+    text-align: center;
+
+    padding: 22px 20px 10px;
+
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Description */
+
+.corps-home-item-description {
+    color: var(--gris);
+
+    font-size: 1rem;
+
+    /*
+       justify permet d'obtenir des bords de paragraphes
+       plus réguliers.
+    */
+
+    text-align: justify;
+
+    padding: 0 25px 30px;
+
+    flex-grow: 1;
+}
+
+
+/* =========================================================
+   SÉPARATION ENTRE LES SECTIONS
+   ========================================================= */
+
+.corps-home+.corps-home {
+    border-top: 1px solid rgba(138, 43, 226, 0.25);
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETTE
+   ========================================================= */
+
+@media screen and (max-width: 950px) {
+
+    /*
+       On passe de trois cartes par ligne à deux.
+    */
+
+    .corps-home-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-title {
+        letter-spacing: 5px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 650px) {
+
+    .home-header {
+        min-height: 90vh;
+
+        padding: 30px 20px;
+    }
+
+
+    .home-title {
+        font-size: 2.7rem;
+
+        letter-spacing: 3px;
+    }
+
+
+    .home-description {
+        font-size: 1.1rem;
+    }
+
+
+    /*
+       Navigation verticale sur téléphone.
+    */
+
+    #navbar nav {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    /*
+       Une seule carte par ligne.
+    */
+
+    .corps-home-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    .corps-home {
+        padding: 60px 20px;
+    }
+
+
+    .corps-home-title {
+        font-size: 1.6rem;
+    }
+
+
+    .corps-home-item-image {
+        height: 260px;
+    }
+
+
+    .corps-home-item-title {
+        min-height: auto;
+    }
+}
