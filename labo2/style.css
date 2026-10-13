@@ -1,0 +1,215 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #101018;
+    color: #f1f1f5;
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*barre au dessus*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+    border-bottom: 1px solid #292938;
+}
+
+
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a:hover {
+    color: #a78bfa;
+}
+
+/*présentation*/
+
+.hero {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 0 24px;
+}
+
+.eyebrow {
+    color: #a78bfa;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.hero h1 span {
+    color: #a78bfa;
+}
+
+.hero h2 {
+    color: #c3c3d1;
+    font-weight: normal;
+}
+
+.intro {
+    max-width: 650px;
+    color: #b5b5c5;
+    margin: 24px 0;
+}
+
+/* Introduction des pages */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    color: #a855f7;
+    font-size: 36px;
+}
+
+.intro p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* cartes competences */
+
+.quick-links {
+    padding: 40px 8% 90px;
+}
+
+.quick-links h2 {
+    margin-bottom: 24px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 24px;
+    background-color: #191925;
+    border: 1px solid #303044;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+}
+
+.card p {
+    color: #b5b5c5;
+}
+
+/*Pied*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    padding: 20px 7%;
+    border-top: 1px solid #39394d;
+    color: #b5b5c5;
+    background-color: #1e1e2e;
+}
+
+footer p {
+    margin: 0;
+    color: #cccccc;
+}
+
+
+footer a {
+    color: #a855f7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* sousligne */
+
+u{
+    text-decoration-color: #8b5cf6;
+}
+
+/* Cartes experience et a propos */
+.experience-card,
+.about-card {
+    background-color: #1e1e2e;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #39394d;
+}
+
+.experience-card h2,
+.about-card h2 {
+    color: #c084fc;
+    margin-top: 0;
+}
+
+.experience-card p,
+.about-card p {
+    color: #dddddd;
+    line-height: 1.7;
+}
+
+.experience-card .date {
+    color: #a855f7;
+    font-size: 14px;
+}
+
+.experience-card .tags {
+    color: #c084fc;
+    font-weight: bold;
+}
+
+
+.about-card {
+    margin-bottom: 20px;
+}
+
+.experience-card {
+    margin-bottom: 20px;
+}
+
+
+
+
